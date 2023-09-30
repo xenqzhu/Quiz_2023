@@ -1,3 +1,1 @@
-
-
-print("Hi :)")
+import introduction_instructions
