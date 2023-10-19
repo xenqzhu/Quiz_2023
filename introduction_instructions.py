@@ -5,16 +5,19 @@
 def yes_no(question):
   valid = False 
   while not valid:
-    response = input(question).lower()
-    if response == "yes" or response == "y":
-      return response
+      response = input(question).lower()
       
-    elif response == "no" or response == "n":
-      return response
-      
-    else:
-      print("<ERROR>: Please enter either 'YES' or 'NO'\n")
-
+      if response == "yes" or response == "y" or response == "yef":
+        response = "yes"
+        return response
+        
+      elif response == "no" or response == "n" or response == "noh":
+        response = "no"
+        return response
+        
+      else:
+        print("<ERROR>: Please enter either 'YES' or 'NO'\n")
+  
         
 # [>] INSTRUCTIONS LAYOUT:
 
@@ -34,10 +37,14 @@ def instructions ():
 print("Welcome to quizith :P \n")
 
 # [>] ASK USER INPUT: 'HAVE YOU PLAYED BEFORE?':
-played = yes_no ("Have you participated in this quiz before?: ").lower()
+played_before = yes_no ("Have you participated in this quiz before?: ")
 
-if played == "no" or "n":
+if played_before == "no":
   instructions()
 
 # [>] CONTINUE TO QUIZ:
-  input("> CONTINUE TO QUIZ: <PRESS ENTER>")
+  print("       --------------------       ")
+  input("""> CONTINUE TO QUIZ: <PRESS ENTER>
+       --------------------       """)
+
+
