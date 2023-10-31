@@ -20,7 +20,5 @@ for x in range (1,20):
   else: 
     print("Incorrect :C \n")
 
-
-
 # < -- MAIN ROUTINE -- >
 

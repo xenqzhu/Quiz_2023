@@ -25,9 +25,10 @@ def instructions ():
   print()
   print("    <-----| HOW TO USE |----->\n")
   print(" | WELCOME TO THE TIMES-TABLE QUIZ |\n")
-  print(""" • You will select a times-table you would like to be tested on (MIN - MAX: 1x-12x) 
+  print(""" • You will select a times-table you would like to 
+   be tested on (MIN - MAX: 1x-12x) 
  • MAX questions: 50
- • INFO SERVICE \n""")
+ • Enter "STATS", at any given time throughout the quiz for information (current Score, remaining Lives, Quit game) \n""")
   return""
 
 
