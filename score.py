@@ -26,7 +26,6 @@ while not Valid:
 times = num_check("Enter a Times-Table: ")
 print()
 
-
 # [>] LOOP: CALCULATES QUESTIONS (TIMES X NUMBER):
 for x in range (1,20):
   answer = times * x
@@ -36,7 +35,6 @@ for x in range (1,20):
   if guess == answer:
     print("Correct! :D \n")
     score += 1
-  
   else: 
     print("Incorrect :C \n")
     lives -= 1
@@ -45,10 +43,11 @@ for x in range (1,20):
   if lives == 0:
     print("Game Over! \n")
     break
-  
   if score == 20:
     break
 
 print("Score: {}".format (score))
-print("Remaining Lives{}".format(lives))
+print("Remaining Lives: {}".format(lives))
+
 # < -- MAIN ROUTINE -- >
+

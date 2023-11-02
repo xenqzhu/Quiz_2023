@@ -1,31 +1,54 @@
 # < -- FUNCTIONS -- >
 
+score = 0 
+lives = 0
 round = 0
-correct = 0
 
+# [>] ERROR MESSAGE COMPONENT:
 def num_check(question):
-  error = "<ERROR> Invalid input. Please enter a whole number. "
+  error = "<ERROR>: Invalid input. Please enter a whole number. \n "
   try:
     response = int(input(question))
     return response
   except ValueError: 
     print(error)
 
+# [>] LIVE AMOUNT MAX = 10 CHECKER:
+Valid = False
+while not Valid:
+  lives = num_check("Enter Lives amount: ")
+  if lives <= 10:
+    valid = True
+    break
+  else:
+    print("<ERROR>: Invalid input. Please enter a number between 0-10. \n")
+
 times = num_check("Enter a Times-Table: ")
 print()
-
-for x in range (1,20):
+  
+# [>] LOOP: CALCULATES QUESTIONS (TIMES X NUMBER):
+for x in range (1,21):
   round += 1
   print("Question: {}".format(round))
   answer = times * x
   guess = num_check ("What is {} x {}? = ".format(times,x))
-  
+
+  # [>] GUESS = CORRECT OR INCORRECT:
   if guess == answer:
     print("Correct! :D \n")
-    correct += 1
-
+    score += 1
   else: 
     print("Incorrect :C \n")
+    lives -= 1
 
+  # [>] LIVES AND SCORE CHECKER:
+  if lives == 0:
+    print("Game Over! \n")
+    break
+  if score == 20:
+    break
+      
+print("Score: {}/20".format (score))
+print("Remaining Lives: {}".format(lives))
 
 # < -- MAIN ROUTINE -- >

@@ -17,7 +17,7 @@ for x in range (1,20):
   answer = times * x
   guess = num_check ("What is {} x {}? = ".format(times,x))
 
-  # [>] 
+  # [>] ANSWER CHECKER:
   if guess == answer:
     print("Correct! :D \n")
   else: 
