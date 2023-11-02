@@ -1,1 +1,1 @@
-import introduction_instructions
+import score

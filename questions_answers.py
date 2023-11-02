@@ -1,5 +1,6 @@
 # < -- FUNCTIONS -- >
 
+# [>] ERROR MESSAGE COMPONENT:
 def num_check(question):
   error = "<ERROR> Invalid input. Please enter a whole number. "
   try:
@@ -11,10 +12,12 @@ def num_check(question):
 times = num_check("Enter a Times-Table: ")
 print()
 
+# [>] LOOP: CALCULATES QUESTIONS (TIMES X NUMBER):
 for x in range (1,20):
   answer = times * x
   guess = num_check ("What is {} x {}? = ".format(times,x))
 
+  # [>] 
   if guess == answer:
     print("Correct! :D \n")
   else: 
