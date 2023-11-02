@@ -50,4 +50,5 @@ for x in range (1,20):
     break
 
 print("Score: {}".format (score))
+print("Remaining Lives{}".format(lives))
 # < -- MAIN ROUTINE -- >
