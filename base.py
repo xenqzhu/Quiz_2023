@@ -31,7 +31,9 @@ def instructions ():
   print(" | WELCOME TO THE TIMES-TABLE QUIZ |\n")
   print(""" • You will select a times-table you would like to 
    be tested on (MIN - MAX: 1x-12x) 
- • MAX questions: 20""")
+ • MAX questions: 20
+ • You may choose (1-10) Spare lives...
+  (Each incorrect answer -1 spare life.)""")
   print("   <------------------------------> \n")
   return""
 
@@ -92,6 +94,7 @@ for x in range (1,21):
   # [>] LIVES AND SCORE CHECKER:
   if lives == 0:
     print("Game Over! \n")
+    print("   <------------------------------> \n")
     break
   if score == 20:
     print("   <------------------------------> \n")
